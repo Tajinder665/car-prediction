@@ -58,7 +58,7 @@ def predict():
         prediction = round(prediction, 2)
     
     with open('history.csv','a') as file:
-        file.write("\n" + str(year) + "," + str(present_price) + "," + str(Kms_driven) + "," + str(Transmission) + "," + Fuel_Type + "," + str(Prediction))
+        file.write("\n" + str(year) + "," + str(present_price) + "," + str(Kms_driven) + "," + str(Transmission) + "," + Fuel_Type + "," + str(prediction))
     
     
     return render_template('car_price.html', selling_price=str(prediction) + " lakhs") 
