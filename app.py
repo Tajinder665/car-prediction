@@ -60,7 +60,7 @@ def predict():
         file.write("\n" + str(year) + "," + str(present_price) + "," + str(Kms_driven) + "," + str(Transmission) + "," + Fuel_Type + "," + str(prediction))
     
     
-    return render_template('car_price.html', selling_price=str(prediction) + " lakhs") 
+    return render_template('car_price.html', selling_price=str(prediction) + " lakhs", seller_title="Used Cars Sellers:", seller_link1="OLX", seller_link2="Car Dekho", seller_link3="Car Trade") 
 
 #Starting the application
 if __name__=='__main__':
