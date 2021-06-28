@@ -40,14 +40,6 @@ def predict():
         Petrol=0
         Diesel=1
 
-
-    print("Year:",year)
-    print("Present_price:",present_price)
-    print("Kms_driven:",Kms_driven)
-    print("Transmission:",Transmission)
-    print("Fuel_Type:",Fuel_Type)
-
-    
     prediction=loadedModel.predict([[ year,  present_price, Kms_driven,Transmission,Diesel,Petrol]])[0]
     print(prediction)
 
@@ -60,7 +52,7 @@ def predict():
         file.write("\n" + str(year) + "," + str(present_price) + "," + str(Kms_driven) + "," + str(Transmission) + "," + Fuel_Type + "," + str(prediction))
     
     
-    return render_template('car_price.html', selling_price=str(prediction) + " lakhs", seller_title="Used Cars Sellers:", seller_link1="OLX", seller_link2="Car Dekho", seller_link3="Car Trade") 
+    return render_template('car_price.html', selling_price=str(prediction) + " lakhs") 
 
 #Starting the application
 if __name__=='__main__':
